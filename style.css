@@ -1,0 +1,438 @@
+/* Base styling */
+body {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+    --yellow: #e7c126;
+    --white: #FFFFFF;
+    --blue: #2f7ace;
+    --black: #000;
+    --green: #2f6522;
+    --darkGreen: #24501b;
+}
+
+li {
+    list-style: none;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 5%;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px 20px;
+    z-index: 9997;
+    background: var(--green);
+    box-shadow: rgba(47, 101, 34, 0.3) 0 8px 24px;
+}
+
+.header-title {
+    margin: 0;
+}
+
+.long {
+    display: block;
+}
+
+.short {
+    display: none;
+}
+
+.header-menu-button {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-line {
+    height: 3px;
+    width: 100%;
+    margin: 4px 0;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.menu-line.transform-top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-line.transform-middle {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.menu-line.transform-bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item .nav-heading {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.nav-item a {
+    color: var(--white);
+    word-spacing: -2px;
+    transition: color 1s ease, transform 1s ease;
+}
+
+.nav-item:hover a {
+    color: var(--yellow);
+    transition: all 0.5s ease;
+}
+
+.left-side, .right-side {
+    width: 50%;
+    padding: 0 2%;
+}
+
+.split-mode {
+    flex-direction: row;
+}
+
+.section-main {
+    margin-top: 70px;
+}
+
+.main-image {
+    background-image: url("images/foodbar.webp");
+    height: 50vh;
+    width: 100%;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 25px 25px white inset;
+}
+
+.main-title {
+    font-size: 50px;
+    margin-bottom: 5px;
+    color: var(--green);
+}
+
+.section-overview {
+    background-color: var(--darkGreen);
+}
+
+.overview-title {
+    color: var(--white);
+    margin: 20px 0;
+}
+
+.section-overview p {
+    color: var(--white);
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.key-features-title {
+    margin: 20px 0 50px 0;
+}
+
+.key-features-list-titles {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--darkGreen);
+    border-radius: 10px;
+}
+
+.key-features-subtitle {
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.key-features-subtitle:hover {
+    color: var(--yellow);
+}
+
+.selected-subtitle {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.key-features-info {
+    width: 75%;
+    background-color: antiquewhite;
+    border-radius: 0 0 20px 20px;;
+    padding: 50px;
+}
+
+.key-features-info-item {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.section-objectives {
+    background-color: var(--darkGreen);
+}
+
+.objective-title {
+    color: var(--white);
+    margin: 20px 0;
+}
+
+.objective-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+
+.objective-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+.section-team-title {
+    margin: 20px 0 50px 0;
+    text-align: center;
+}
+
+.section-semester-info {
+    color: var(--white);
+    background-color: var(--darkGreen);
+}
+
+.semester-info-title {
+    color: var(--white);
+    margin: 20px 0;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.section-semester-info p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.team-cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.team-name-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.roles-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+    .long {
+        display: none;
+    }
+
+    .short  {
+        display: block;
+    }
+
+    .header-menu-button {
+        display: block;
+        z-index: 9999;
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: var(--green);
+        transition: right 0.5s ease;
+        z-index: 9996;
+    }
+
+    .header-menu-button:hover .menu-line {
+        background-color: var(--yellow);
+    }
+
+    .header-menu.active {
+        right: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 60%;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+        width: 100%;
+        padding-left: 25%;
+        display: flex;
+        font-size: 18px;
+    }
+
+    .nav-item:hover a {
+        transform: translateX(5px);
+    }
+
+    .nav-heading {
+        text-decoration: none;
+        display: block;
+    }
+
+    .team-cards-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 850px) {
+    .key-features-list-titles {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .key-features-subtitle {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    .objective-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .objective-list li {
+        width: 100%;
+        height: 60px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-menu {
+        width: 100%;
+    }
+
+    .nav-item {
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-item:hover a {
+        transform: translateX(0);
+    }
+
+    .section-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 20px 0;
+    }
+
+    .left-side, .right-side {
+        width: 95%;
+    }
+
+    .main-title, .main-subtext {
+        text-align: center;
+    }
+}
+
+.final-report-body, .final-video-body {
+    background-color: antiquewhite;
+}
+
+.final-report-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    padding: 50px 0;
+}
+
+.final-report-page {
+    background-color: white;
+    width: 600px;
+    min-height: 850px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.final-video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    padding: 50px 0;
+}
